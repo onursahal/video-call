@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #253341;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #253341 inset;
+  box-shadow: 0 0 0px 1000px #253341 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  color: white;
+}
+
+@layer components {
+  html {
+    @apply font-mono;
+  }
+  /* common */
+  .button-primary {
+    @apply bg-green-500 text-slate-200 font-semibold p-4 rounded-md;
+  }
+
+  .input-primary {
+    @apply bg-slate-800 w-full p-4 text-slate-200 font-semibold;
+  }
+
+  /* authorization */
+  .authorization-container {
+    @apply flex w-1/4 flex-col gap-8 justify-center;
+  }
+
+  .logo-header {
+    @apply login-input-title text-2xl rounded-t-md text-center border-2 border-green-500;
+  }
+
+  .page-anchor {
+    @apply text-green-500 bg-slate-200 rounded-b-md border-2 border-green-500 active:bg-green-100 cursor-pointer flex text-sm p-4 items-center justify-center;
+  }
+
+  /* login */
+
+  .login-container {
+    @apply flex flex-col gap-2 justify-end;
+  }
+
+  .login-input-title {
+    @apply font-bold text-green-500 bg-slate-200 p-4 whitespace-nowrap no-underline;
+  }
+
+  .login-input-container {
+    @apply flex flex-row gap-2 flex-1 justify-stretch items-center;
+  }
+}
